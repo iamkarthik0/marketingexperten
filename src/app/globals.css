@@ -23,6 +23,12 @@
 :root {
   --header-height: 64px;
 
+  /* Blue theme override - temporary */
+  --accent-500: #3b82f6;
+  --accent-rgb-500: 59, 130, 246;
+  --accent-800: #1e40af;
+  --accent-rgb-800: 30, 64, 175;
+
   text-rendering: geometricprecision;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;

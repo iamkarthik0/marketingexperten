@@ -39,11 +39,16 @@ export function Hero(hero: Hero & { eventsKey: GeneralEvents["ingestKey"] }) {
         <div className="col-span-1 flex h-full items-center justify-center" />
       </div>
       {/* --- */}
-      <figure className="bg-accent-500/40 pointer-events-none absolute -bottom-[70%] left-1/2 z-0 block aspect-square w-[520px] -translate-x-1/2 rounded-full blur-[200px]" />
-      <figure className="bg-surface-primary dark:bg-dark-surface-primary pointer-events-none absolute top-[64px] left-[4vw] z-20 hidden aspect-square w-[32vw] rounded-full opacity-50 blur-[100px] md:block" />
-      <figure className="bg-surface-primary dark:bg-dark-surface-primary pointer-events-none absolute right-[7vw] bottom-[-50px] z-20 hidden aspect-square w-[30vw] rounded-full opacity-50 blur-[100px] md:block" />
+      {/* Background blur effects - everywhere except upper and middle */}
+
       {/* --- */}
       <div className="divide-border dark:divide-dark-border relative z-10 flex flex-col divide-y pt-[35px]">
+        <figure className="bg-accent-500/40 pointer-events-none absolute -bottom-[40%] left-[8%] z-0 block aspect-square w-[600px] rounded-full blur-[120px]" />
+        <figure className="bg-accent-500/40 pointer-events-none absolute -top-[40%] right-[8%] z-0 block aspect-square w-[650px] rounded-full blur-[120px]" />
+        <figure className="bg-accent-500/40 pointer-events-none absolute -bottom-[90%] left-[40%] z-0 block aspect-square w-[500px] rounded-full blur-[120px]" />
+        <figure className="bg-surface-primary dark:bg-dark-surface-primary pointer-events-none absolute top-[64px] left-[4vw] z-0 hidden aspect-square w-[32vw] rounded-full opacity-50 blur-[100px] md:block" />
+        <figure className="bg-surface-primary dark:bg-dark-surface-primary pointer-events-none absolute right-[7vw] bottom-[-50px] z-0 hidden aspect-square w-[30vw] rounded-full opacity-50 blur-[100px] md:block" />
+
         <div className="flex flex-col items-center justify-end">
           <div className="border-border dark:border-dark-border flex items-center gap-2 border! border-b-0! px-4 py-2">
             <AvatarsGroup>
@@ -57,8 +62,8 @@ export function Hero(hero: Hero & { eventsKey: GeneralEvents["ingestKey"] }) {
           </div>
         </div>
         <div>
-          <div className="mx-auto flex min-h-[288px] max-w-[80vw] shrink-0 flex-col items-center justify-center gap-2 px-2 py-4 sm:px-16 lg:px-24">
-            <h1 className="text-text-primary dark:text-dark-text-primary max-w-(--breakpoint-lg) text-center text-[clamp(32px,7vw,64px)] leading-none font-medium tracking-[-1.44px] text-pretty md:tracking-[-2.16px]">
+          <div className="z-30 mx-auto flex min-h-[288px] max-w-[80vw] shrink-0 flex-col items-center justify-center gap-2 px-2 py-4 sm:px-16 lg:px-24">
+            <h1 className="text-text-primary dark:text-dark-text-primary z-10 max-w-(--breakpoint-lg) text-center text-[clamp(32px,7vw,64px)] leading-none font-medium tracking-[-1.44px] text-pretty md:tracking-[-2.16px]">
               {hero.title}
             </h1>
             <h2 className="text-md text-text-tertiary dark:text-dark-text-tertiary max-w-2xl text-center text-pretty md:text-lg">
@@ -66,8 +71,8 @@ export function Hero(hero: Hero & { eventsKey: GeneralEvents["ingestKey"] }) {
             </h2>
           </div>
         </div>
-        <div className="flex items-start justify-center px-8 sm:px-24">
-          <div className="flex w-full max-w-[80vw] flex-col items-center justify-start md:max-w-[392px]!">
+        <div className="z-30 flex items-start justify-center px-8 sm:px-24">
+          <div className="z-30 flex w-full max-w-[80vw] flex-col items-center justify-start md:max-w-[392px]!">
             {hero.actions?.map(({ href, label, type, _id }) => (
               <TrackedButtonLink
                 key={_id}

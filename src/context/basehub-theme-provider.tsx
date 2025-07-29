@@ -32,12 +32,13 @@ export function BaseHubThemeProvider() {
       {async ([data]) => {
         "use server";
         const accent = colors[data.site.settings.theme.accent];
+        console.log(accent);
         const grayScale = colors[data.site.settings.theme.grayScale];
 
         const css = Object.entries(accent).map(([key, value]) => {
           const rgb = anyColorToRgb(value);
 
-          return `--accent-${key}: ${value}; --accent-rgb-${key}: ${rgb.r}, ${rgb.g}, ${rgb.b};`;
+          return `--accent-${key}: ${value}; --accent-rgb-${key}: 30, 64, 175;`;
         });
 
         Object.entries(grayScale).forEach(([key, value]) => {
