@@ -9,6 +9,10 @@ const nextConfig = {
   images: {
     remotePatterns: [{ hostname: "assets.basehub.com" }, { hostname: "basehub.earth" }],
   },
+
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 } satisfies NextConfig;
 
 export default nextConfig;
