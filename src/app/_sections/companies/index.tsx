@@ -37,7 +37,7 @@ export function Companies(props: Companies) {
       {/* Section Title */}
       {props.subtitle && (
         <div className="relative z-10 mb-6 px-4 text-center sm:mb-7 sm:px-6 md:mb-8 lg:mb-10 lg:px-8">
-          <h2 className="text-text-tertiary dark:text-dark-text-tertiary text-xs font-medium tracking-wider uppercase opacity-60 sm:text-sm sm:opacity-65 md:text-sm md:opacity-70 lg:text-base">
+          <h2 className="text-text-tertiary dark:text-dark-text-tertiary text-xs font-medium opacity-60 sm:text-sm sm:opacity-65 md:text-sm md:opacity-70 lg:text-base">
             {props.subtitle}
           </h2>
         </div>
@@ -153,7 +153,7 @@ function CompanyLogo({ company }: { company: Companies["companies"][0] }) {
         alt={company.image.alt || company._title}
         width={company.image.width || 160}
         height={company.image.height || 80}
-        className="max-h-full max-w-full object-contain opacity-40 grayscale transition-all duration-300 group-hover:cursor-pointer group-hover:opacity-100 group-hover:grayscale-0 sm:opacity-45 md:opacity-50 lg:opacity-55 dark:opacity-70 dark:invert dark:group-hover:invert-0 dark:sm:opacity-75 dark:md:opacity-80"
+        className="max-h-full max-w-full object-contain grayscale transition-all duration-300 group-hover:cursor-pointer group-hover:grayscale-0 dark:opacity-70 dark:invert dark:group-hover:invert-0 dark:sm:opacity-75 dark:md:opacity-80"
       />
     </div>
   );
