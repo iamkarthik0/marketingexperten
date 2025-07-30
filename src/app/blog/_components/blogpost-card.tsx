@@ -31,15 +31,15 @@ export function BlogpostCard({ type = "list", className, ...post }: BlogPostCard
   switch (type) {
     case "list": {
       return (
-        <article className="border-b border-border py-2 text-base dark:border-dark-border">
+        <article className="border-border dark:border-dark-border border-b py-2 text-base">
           <ButtonLink
             key={post._id}
             unstyled
-            className="lg:text-md grid w-full grid-cols-[auto_auto] place-content-start items-center justify-items-start rounded-lg p-4 text-text-secondary outline-hidden transition-colors hover:bg-surface-secondary dark:text-dark-text-secondary dark:hover:bg-dark-surface-secondary max-md:justify-items-start md:grid-cols-[50%_repeat(3,1fr)] md:first:*:place-items-start md:last:*:place-items-end"
+            className="lg:text-md text-text-secondary hover:bg-surface-secondary dark:text-dark-text-secondary dark:hover:bg-dark-surface-secondary grid w-full grid-cols-[auto_auto] place-content-start items-center justify-items-start rounded-lg p-4 outline-hidden transition-colors max-md:justify-items-start md:grid-cols-[50%_repeat(3,1fr)] md:first:*:place-items-start md:last:*:place-items-end"
             href={`/blog/${post._slug}`}
           >
             {/* <article className={clsx("", className)}> */}
-            <h3 className="relative col-span-2 max-w-full justify-self-start pr-4 font-medium text-text-primary dark:text-dark-text-primary max-lg:line-clamp-2 md:col-span-1 lg:truncate">
+            <h3 className="text-text-primary dark:text-dark-text-primary relative col-span-2 max-w-full justify-self-start pr-4 font-medium max-lg:line-clamp-2 md:col-span-1 lg:truncate">
               {post._title}
             </h3>
             <SimpleTooltip
@@ -68,8 +68,8 @@ export function BlogpostCard({ type = "list", className, ...post }: BlogPostCard
           key={post._id}
           className={clsx(
             "group flex flex-col self-stretch rounded-xl border transition-shadow [--heading-size:_1.1250rem]",
-            "border-border bg-surface-secondary text-text-secondary hover:shadow-md dark:border-dark-border dark:bg-dark-surface-secondary dark:text-dark-text-secondary dark:hover:shadow-sm dark:hover:shadow-grayscale-700",
-            "outline-0 focus-visible:ring-3 focus-visible:ring-accent-500",
+            "border-border bg-surface-secondary text-text-secondary dark:border-dark-border dark:bg-dark-surface-secondary dark:text-dark-text-secondary dark:hover:shadow-grayscale-700 hover:shadow-md dark:hover:shadow-sm",
+            "focus-visible:ring-accent-500 outline-0 focus-visible:ring-3",
             className,
           )}
           href={`/blog/${post._slug}`}
@@ -82,14 +82,14 @@ export function BlogpostCard({ type = "list", className, ...post }: BlogPostCard
               {...post.image}
               priority
               withPlaceholder
-              className="h-full w-full rounded-sm bg-surface-tertiary/20 object-cover dark:bg-dark-surface-tertiary/20"
+              className="bg-surface-tertiary/20 dark:bg-dark-surface-tertiary/20 h-full w-full rounded-sm object-cover"
               height={324}
               width={576}
             />
           </figure>
           <div className={clsx("flex flex-col justify-between gap-3 p-4")}>
             <header className="flex items-center justify-between gap-2">
-              <p className="text-sm text-text-tertiary dark:text-dark-text-tertiary lg:text-base">
+              <p className="text-text-tertiary dark:text-dark-text-tertiary text-sm lg:text-base">
                 {formatDate(post.publishedAt)}
               </p>
               <AvatarsGroup animate>
@@ -99,10 +99,10 @@ export function BlogpostCard({ type = "list", className, ...post }: BlogPostCard
               </AvatarsGroup>
             </header>
             <main className="flex flex-col gap-2 lg:flex-1">
-              <h3 className="text-[length:var(--heading-size)] font-medium text-text-primary dark:text-dark-text-primary">
+              <h3 className="text-text-primary dark:text-dark-text-primary text-[length:var(--heading-size)] font-medium">
                 {post._title}
               </h3>
-              <p className="line-clamp-2 text-sm text-text-secondary dark:text-dark-text-secondary lg:text-base">
+              <p className="text-text-secondary dark:text-dark-text-secondary line-clamp-2 text-sm lg:text-base">
                 {post.description}
               </p>
             </main>

@@ -100,9 +100,9 @@ export default async function BlogPage() {
               >
                 <Search _searchKey={blogPost._searchKey} />
               </SearchHitsProvider>
-              {blog.featuredPosts
-                ?.slice(0, 3)
-                .map((post) => <BlogpostCard key={post._id} type="card" {...post} />)}
+              {blog.featuredPosts?.slice(0, 4).map((post) => (
+                <BlogpostCard key={post._id} type="card" {...post} />
+              ))}
             </div>
             <div className="w-full space-y-3">
               <Heading align="left">

@@ -186,7 +186,7 @@ export interface BlockColor {
     __typename: 'BlockColor'
 }
 
-export type BlockDocument = (AuthorComponent | Authors | AvatarComponent | Avatars | Blog | BlogPostComponent | BooleanComponent | ButtonComponent | CalloutComponent | CalloutV2Component | Categories | CategoryComponent | Changelog | ChangelogPostComponent | Characteristics | CharacteristicsItem | CodeSnippetComponent | Collections | CompaniesComponent | CompanyComponent | ComparisonOptions | Components | CustomTextComponent | CustomerSatisfactionBannerComponent | DarkLightImageComponent | FaqComponent | FaqItemComponent | FeatureComponent | FeatureHeroComponent | FeatureWithIconComponent | Features | FeaturesBigImageComponent | FeaturesBigImageList | FeaturesCardsComponent | FeaturesCardsList | FeaturesCardsListItem | FeaturesGridComponent | FeaturesGridList | FeaturesSideBySideComponent | FeaturesSideBySideList | FeaturesSideBySideListItem | Footer | FormComponent | FormWrapperComponent | FreeformTextComponent | Header | HeaderNavbarLinkComponent | HeadingComponent | HeroComponent | List | ListItem | Metadata | MetadataOverridesComponent | MoreCompanies | Navbar | NavbarItem | Navbar_1 | Newsletter | PageReferenceComponent | Pages | PagesItem | PlanComponent | Plans | Posts | Posts_1 | PricingComponent | PricingPlanComponent | PricingPlans | PricingTableComponent | Questions | QuoteComponent | Quotes | RichTextCalloutComponent | RightCtas | Sections | Settings | Site | SocialLinkComponent | SocialLinks | Sublinks | SublinksItem | TestimonialSliderComponent | TestimonialsGridComponent | Theme | ValueComponent | Values | _AgentSTART | authorComponent_AsList | avatarComponent_AsList | blogPostComponent_AsList | booleanComponent_AsList | buttonComponent_AsList | calloutComponent_AsList | calloutV2Component_AsList | categoryComponent_AsList | changelogPostComponent_AsList | characteristicsItem_AsList | codeSnippetComponent_AsList | companiesComponent_AsList | companyComponent_AsList | customTextComponent_AsList | customerSatisfactionBannerComponent_AsList | darkLightImageComponent_AsList | faqComponent_AsList | faqItemComponent_AsList | featureComponent_AsList | featureHeroComponent_AsList | featureWithIconComponent_AsList | featuresBigImageComponent_AsList | featuresCardsComponent_AsList | featuresCardsListItem_AsList | featuresGridComponent_AsList | featuresSideBySideComponent_AsList | featuresSideBySideListItem_AsList | formComponent_AsList | formWrapperComponent_AsList | freeformTextComponent_AsList | headerNavbarLinkComponent_AsList | headingComponent_AsList | heroComponent_AsList | listItem_AsList | metadataOverridesComponent_AsList | navbarItem_AsList | pageReferenceComponent_AsList | pagesItem_AsList | planComponent_AsList | pricingComponent_AsList | pricingPlanComponent_AsList | pricingTableComponent_AsList | quoteComponent_AsList | richTextCalloutComponent_AsList | socialLinkComponent_AsList | sublinksItem_AsList | testimonialSliderComponent_AsList | testimonialsGridComponent_AsList | valueComponent_AsList) & { __isUnion?: true }
+export type BlockDocument = (AuthorComponent | Authors | AvatarComponent | Avatars | Blog | BlogPostComponent | BooleanComponent | ButtonComponent | CalloutComponent | CalloutV2Component | Categories | CategoryComponent | Changelog | ChangelogPostComponent | Characteristics | CharacteristicsItem | CodeSnippetComponent | Collections | CompaniesComponent | CompanyComponent | ComparisonOptions | Components | CustomTextComponent | CustomerSatisfactionBannerComponent | DarkLightImageComponent | FaqComponent | FaqItemComponent | FeatureComponent | FeatureHeroComponent | FeatureWithIconComponent | Features | FeaturesBigImageComponent | FeaturesBigImageList | FeaturesCardsComponent | FeaturesCardsList | FeaturesCardsListItem | FeaturesGridComponent | FeaturesGridList | FeaturesSideBySideComponent | FeaturesSideBySideList | FeaturesSideBySideListItem | Footer | FormComponent | FormWrapperComponent | FreeformTextComponent | Header | HeaderNavbarLinkComponent | HeadingComponent | HeroComponent | List | ListItem | Metadata | MetadataOverridesComponent | MoreCompanies | Navbar | NavbarItem | Navbar_1 | Newsletter | PageReferenceComponent | Pages | PagesItem | PlanComponent | Plans | Posts | Posts_1 | PricingComponent | PricingPlanComponent | PricingPlans | PricingTableComponent | Questions | QuoteComponent | Quotes | RichTextCalloutComponent | RightCtas | Sections | Settings | Site | SocialLinkComponent | SocialLinks | Sublinks | SublinksItem | TestimonialSliderComponent | TestimonialsGridComponent | Theme | ValueComponent | Values | YoutubeComponentComponent | _AgentSTART | authorComponent_AsList | avatarComponent_AsList | blogPostComponent_AsList | booleanComponent_AsList | buttonComponent_AsList | calloutComponent_AsList | calloutV2Component_AsList | categoryComponent_AsList | changelogPostComponent_AsList | characteristicsItem_AsList | codeSnippetComponent_AsList | companiesComponent_AsList | companyComponent_AsList | customTextComponent_AsList | customerSatisfactionBannerComponent_AsList | darkLightImageComponent_AsList | faqComponent_AsList | faqItemComponent_AsList | featureComponent_AsList | featureHeroComponent_AsList | featureWithIconComponent_AsList | featuresBigImageComponent_AsList | featuresCardsComponent_AsList | featuresCardsListItem_AsList | featuresGridComponent_AsList | featuresSideBySideComponent_AsList | featuresSideBySideListItem_AsList | formComponent_AsList | formWrapperComponent_AsList | freeformTextComponent_AsList | headerNavbarLinkComponent_AsList | headingComponent_AsList | heroComponent_AsList | listItem_AsList | metadataOverridesComponent_AsList | navbarItem_AsList | pageReferenceComponent_AsList | pagesItem_AsList | planComponent_AsList | pricingComponent_AsList | pricingPlanComponent_AsList | pricingTableComponent_AsList | quoteComponent_AsList | richTextCalloutComponent_AsList | socialLinkComponent_AsList | sublinksItem_AsList | testimonialSliderComponent_AsList | testimonialsGridComponent_AsList | valueComponent_AsList | youtubeComponentComponent_AsList) & { __isUnion?: true }
 
 export interface BlockDocumentSys {
     apiNamePath: Scalars['String']
@@ -245,7 +245,7 @@ export interface BlockImage {
     __typename: 'BlockImage'
 }
 
-export type BlockList = (Authors | Avatars | Categories | Characteristics | Features | FeaturesBigImageList | FeaturesCardsList | FeaturesGridList | FeaturesSideBySideList | List | MoreCompanies | Navbar | Navbar_1 | Pages | Plans | Posts | Posts_1 | PricingPlans | Questions | Quotes | RightCtas | SocialLinks | Sublinks | Values | authorComponent_AsList | avatarComponent_AsList | blogPostComponent_AsList | booleanComponent_AsList | buttonComponent_AsList | calloutComponent_AsList | calloutV2Component_AsList | categoryComponent_AsList | changelogPostComponent_AsList | characteristicsItem_AsList | codeSnippetComponent_AsList | companiesComponent_AsList | companyComponent_AsList | customTextComponent_AsList | customerSatisfactionBannerComponent_AsList | darkLightImageComponent_AsList | faqComponent_AsList | faqItemComponent_AsList | featureComponent_AsList | featureHeroComponent_AsList | featureWithIconComponent_AsList | featuresBigImageComponent_AsList | featuresCardsComponent_AsList | featuresCardsListItem_AsList | featuresGridComponent_AsList | featuresSideBySideComponent_AsList | featuresSideBySideListItem_AsList | formComponent_AsList | formWrapperComponent_AsList | freeformTextComponent_AsList | headerNavbarLinkComponent_AsList | headingComponent_AsList | heroComponent_AsList | listItem_AsList | metadataOverridesComponent_AsList | navbarItem_AsList | pageReferenceComponent_AsList | pagesItem_AsList | planComponent_AsList | pricingComponent_AsList | pricingPlanComponent_AsList | pricingTableComponent_AsList | quoteComponent_AsList | richTextCalloutComponent_AsList | socialLinkComponent_AsList | sublinksItem_AsList | testimonialSliderComponent_AsList | testimonialsGridComponent_AsList | valueComponent_AsList) & { __isUnion?: true }
+export type BlockList = (Authors | Avatars | Categories | Characteristics | Features | FeaturesBigImageList | FeaturesCardsList | FeaturesGridList | FeaturesSideBySideList | List | MoreCompanies | Navbar | Navbar_1 | Pages | Plans | Posts | Posts_1 | PricingPlans | Questions | Quotes | RightCtas | SocialLinks | Sublinks | Values | authorComponent_AsList | avatarComponent_AsList | blogPostComponent_AsList | booleanComponent_AsList | buttonComponent_AsList | calloutComponent_AsList | calloutV2Component_AsList | categoryComponent_AsList | changelogPostComponent_AsList | characteristicsItem_AsList | codeSnippetComponent_AsList | companiesComponent_AsList | companyComponent_AsList | customTextComponent_AsList | customerSatisfactionBannerComponent_AsList | darkLightImageComponent_AsList | faqComponent_AsList | faqItemComponent_AsList | featureComponent_AsList | featureHeroComponent_AsList | featureWithIconComponent_AsList | featuresBigImageComponent_AsList | featuresCardsComponent_AsList | featuresCardsListItem_AsList | featuresGridComponent_AsList | featuresSideBySideComponent_AsList | featuresSideBySideListItem_AsList | formComponent_AsList | formWrapperComponent_AsList | freeformTextComponent_AsList | headerNavbarLinkComponent_AsList | headingComponent_AsList | heroComponent_AsList | listItem_AsList | metadataOverridesComponent_AsList | navbarItem_AsList | pageReferenceComponent_AsList | pagesItem_AsList | planComponent_AsList | pricingComponent_AsList | pricingPlanComponent_AsList | pricingTableComponent_AsList | quoteComponent_AsList | richTextCalloutComponent_AsList | socialLinkComponent_AsList | sublinksItem_AsList | testimonialSliderComponent_AsList | testimonialsGridComponent_AsList | valueComponent_AsList | youtubeComponentComponent_AsList) & { __isUnion?: true }
 
 export interface BlockOgImage {
     height: Scalars['Int']
@@ -336,7 +336,7 @@ export interface Body_1 {
 }
 
 export interface Body_1RichText {
-    blocks: UnionFaqItemComponentCodeSnippetComponentRichTextCalloutComponent[]
+    blocks: UnionYoutubeComponentComponentFaqItemComponentCodeSnippetComponentRichTextCalloutComponent[]
     content: Scalars['BSHBRichTextContentSchema']
     toc: Scalars['BSHBRichTextTOCSchema']
     __typename: 'Body_1RichText'
@@ -1847,11 +1847,11 @@ export type UnionBooleanComponentCustomTextComponent = (BooleanComponent | Custo
 
 export type UnionCodeSnippetComponent = (CodeSnippetComponent) & { __isUnion?: true }
 
-export type UnionFaqItemComponentCodeSnippetComponentRichTextCalloutComponent = (CodeSnippetComponent | FaqItemComponent | RichTextCalloutComponent) & { __isUnion?: true }
-
 export type UnionFreeformTextComponentFeaturesCardsComponentCalloutComponentCompaniesComponentFaqComponentFeaturesBigImageComponentFeaturesGridComponentFeatureHeroComponentFeaturesSideBySideComponentCalloutV2ComponentFormComponentHeroComponentPricingTableComponentPricingComponentTestimonialSliderComponentTestimonialsGridComponent = (CalloutComponent | CalloutV2Component | CompaniesComponent | FaqComponent | FeatureHeroComponent | FeaturesBigImageComponent | FeaturesCardsComponent | FeaturesGridComponent | FeaturesSideBySideComponent | FormComponent | FreeformTextComponent | HeroComponent | PricingComponent | PricingTableComponent | TestimonialSliderComponent | TestimonialsGridComponent) & { __isUnion?: true }
 
 export type UnionPageReferenceComponentCustomTextComponent = (CustomTextComponent | PageReferenceComponent) & { __isUnion?: true }
+
+export type UnionYoutubeComponentComponentFaqItemComponentCodeSnippetComponentRichTextCalloutComponent = (CodeSnippetComponent | FaqItemComponent | RichTextCalloutComponent | YoutubeComponentComponent) & { __isUnion?: true }
 
 export interface ValueComponent {
     _analyticsKey: Scalars['String']
@@ -1896,6 +1896,22 @@ export interface Variant {
     label: Scalars['String']
     __typename: 'Variant'
 }
+
+export interface YoutubeComponentComponent {
+    _analyticsKey: Scalars['String']
+    _dashboardUrl: Scalars['String']
+    _id: Scalars['String']
+    _idPath: Scalars['String']
+    _slug: Scalars['String']
+    _slugPath: Scalars['String']
+    _sys: BlockDocumentSys
+    _title: Scalars['String']
+    videoTitle: (Scalars['String'] | null)
+    youtubeUrl: (Scalars['String'] | null)
+    __typename: 'YoutubeComponentComponent'
+}
+
+export type YoutubeComponentComponentOrderByEnum = '_sys_createdAt__ASC' | '_sys_createdAt__DESC' | '_sys_hash__ASC' | '_sys_hash__DESC' | '_sys_id__ASC' | '_sys_id__DESC' | '_sys_lastModifiedAt__ASC' | '_sys_lastModifiedAt__DESC' | '_sys_slug__ASC' | '_sys_slug__DESC' | '_sys_title__ASC' | '_sys_title__DESC' | 'videoTitle__ASC' | 'videoTitle__DESC' | 'youtubeUrl__ASC' | 'youtubeUrl__DESC'
 
 export interface _AgentSTART {
     _agentKey: Scalars['String']
@@ -2045,6 +2061,7 @@ export interface _components {
     testimonialSlider: testimonialSliderComponent_AsList
     testimonialsGrid: testimonialsGridComponent_AsList
     value: valueComponent_AsList
+    youtubeComponent: youtubeComponentComponent_AsList
     __typename: '_components'
 }
 
@@ -2979,6 +2996,25 @@ export interface valueComponent_AsList {
     __typename: 'valueComponent_AsList'
 }
 
+export interface youtubeComponentComponent_AsList {
+    _analyticsKey: Scalars['String']
+    _dashboardUrl: Scalars['String']
+    _id: Scalars['String']
+    _idPath: Scalars['String']
+    _meta: ListMeta
+    /** The key used to search from the frontend. */
+    _searchKey: Scalars['String']
+    _slug: Scalars['String']
+    _slugPath: Scalars['String']
+    _sys: BlockDocumentSys
+    _title: Scalars['String']
+    /** Returns the first item in the list, or null if the list is empty. Useful when you expect only one result. */
+    item: (YoutubeComponentComponent | null)
+    /** Returns the list of items after filtering and paginating according to the arguments sent by the client. */
+    items: YoutubeComponentComponent[]
+    __typename: 'youtubeComponentComponent_AsList'
+}
+
 export interface AuthorComponentGenqlSelection{
     _analyticsKey?: { __args: {
     /**
@@ -3216,6 +3252,7 @@ export interface BlockDocumentGenqlSelection{
     on_Theme?: ThemeGenqlSelection
     on_ValueComponent?: ValueComponentGenqlSelection
     on_Values?: ValuesGenqlSelection
+    on_YoutubeComponentComponent?: YoutubeComponentComponentGenqlSelection
     on__AgentSTART?: _AgentSTARTGenqlSelection
     on_authorComponent_AsList?: authorComponent_AsListGenqlSelection
     on_avatarComponent_AsList?: avatarComponent_AsListGenqlSelection
@@ -3266,6 +3303,7 @@ export interface BlockDocumentGenqlSelection{
     on_testimonialSliderComponent_AsList?: testimonialSliderComponent_AsListGenqlSelection
     on_testimonialsGridComponent_AsList?: testimonialsGridComponent_AsListGenqlSelection
     on_valueComponent_AsList?: valueComponent_AsListGenqlSelection
+    on_youtubeComponentComponent_AsList?: youtubeComponentComponent_AsListGenqlSelection
     __typename?: boolean | number
 }
 
@@ -3417,6 +3455,7 @@ export interface BlockListGenqlSelection{
     on_testimonialSliderComponent_AsList?: testimonialSliderComponent_AsListGenqlSelection
     on_testimonialsGridComponent_AsList?: testimonialsGridComponent_AsListGenqlSelection
     on_valueComponent_AsList?: valueComponent_AsListGenqlSelection
+    on_youtubeComponentComponent_AsList?: youtubeComponentComponent_AsListGenqlSelection
     __typename?: boolean | number
 }
 
@@ -3564,7 +3603,7 @@ export interface Body_1GenqlSelection{
 }
 
 export interface Body_1RichTextGenqlSelection{
-    blocks?: UnionFaqItemComponentCodeSnippetComponentRichTextCalloutComponentGenqlSelection
+    blocks?: UnionYoutubeComponentComponentFaqItemComponentCodeSnippetComponentRichTextCalloutComponentGenqlSelection
     content?: boolean | number
     toc?: boolean | number
     __typename?: boolean | number
@@ -5969,14 +6008,6 @@ export interface UnionCodeSnippetComponentGenqlSelection{
     __typename?: boolean | number
 }
 
-export interface UnionFaqItemComponentCodeSnippetComponentRichTextCalloutComponentGenqlSelection{
-    on_CodeSnippetComponent?:CodeSnippetComponentGenqlSelection,
-    on_FaqItemComponent?:FaqItemComponentGenqlSelection,
-    on_RichTextCalloutComponent?:RichTextCalloutComponentGenqlSelection,
-    on_BlockDocument?: BlockDocumentGenqlSelection,
-    __typename?: boolean | number
-}
-
 export interface UnionFreeformTextComponentFeaturesCardsComponentCalloutComponentCompaniesComponentFaqComponentFeaturesBigImageComponentFeaturesGridComponentFeatureHeroComponentFeaturesSideBySideComponentCalloutV2ComponentFormComponentHeroComponentPricingTableComponentPricingComponentTestimonialSliderComponentTestimonialsGridComponentGenqlSelection{
     on_CalloutComponent?:CalloutComponentGenqlSelection,
     on_CalloutV2Component?:CalloutV2ComponentGenqlSelection,
@@ -6001,6 +6032,15 @@ export interface UnionFreeformTextComponentFeaturesCardsComponentCalloutComponen
 export interface UnionPageReferenceComponentCustomTextComponentGenqlSelection{
     on_CustomTextComponent?:CustomTextComponentGenqlSelection,
     on_PageReferenceComponent?:PageReferenceComponentGenqlSelection,
+    on_BlockDocument?: BlockDocumentGenqlSelection,
+    __typename?: boolean | number
+}
+
+export interface UnionYoutubeComponentComponentFaqItemComponentCodeSnippetComponentRichTextCalloutComponentGenqlSelection{
+    on_CodeSnippetComponent?:CodeSnippetComponentGenqlSelection,
+    on_FaqItemComponent?:FaqItemComponentGenqlSelection,
+    on_RichTextCalloutComponent?:RichTextCalloutComponentGenqlSelection,
+    on_YoutubeComponentComponent?:YoutubeComponentComponentGenqlSelection,
     on_BlockDocument?: BlockDocumentGenqlSelection,
     __typename?: boolean | number
 }
@@ -6068,6 +6108,28 @@ export interface VariantGenqlSelection{
     label?: boolean | number
     __typename?: boolean | number
 }
+
+export interface YoutubeComponentComponentGenqlSelection{
+    _analyticsKey?: { __args: {
+    /**
+     * The scope of the analytics key. Use `send` for just ingesting data. Use `query` if you need to show an analytics data in your website.
+     * 
+     * Have in mind, if you expose your `query` analytics key in the frontend, you'll be exposing all of this block's analytics data to the public. This is generally safe, but it might not be in your case.
+     */
+    scope?: (AnalyticsKeyScope | null)} } | boolean | number
+    _dashboardUrl?: boolean | number
+    _id?: boolean | number
+    _idPath?: boolean | number
+    _slug?: boolean | number
+    _slugPath?: boolean | number
+    _sys?: BlockDocumentSysGenqlSelection
+    _title?: boolean | number
+    videoTitle?: boolean | number
+    youtubeUrl?: boolean | number
+    __typename?: boolean | number
+}
+
+export interface YoutubeComponentComponentFilterInput {AND?: (YoutubeComponentComponentFilterInput | null),OR?: (YoutubeComponentComponentFilterInput | null),_id?: (StringFilter | null),_slug?: (StringFilter | null),_sys_apiNamePath?: (StringFilter | null),_sys_createdAt?: (DateFilter | null),_sys_hash?: (StringFilter | null),_sys_id?: (StringFilter | null),_sys_idPath?: (StringFilter | null),_sys_lastModifiedAt?: (DateFilter | null),_sys_slug?: (StringFilter | null),_sys_slugPath?: (StringFilter | null),_sys_title?: (StringFilter | null),_title?: (StringFilter | null),videoTitle?: (StringFilter | null),youtubeUrl?: (StringFilter | null)}
 
 export interface _AgentSTARTGenqlSelection{
     _agentKey?: boolean | number
@@ -6609,6 +6671,15 @@ export interface _componentsGenqlSelection{
     first?: (Scalars['Int'] | null), 
     /** Order by a field. */
     orderBy?: (ValueComponentOrderByEnum | null), 
+    /** Skip the first n items. */
+    skip?: (Scalars['Int'] | null)} })
+    youtubeComponent?: (youtubeComponentComponent_AsListGenqlSelection & { __args?: {
+    /** Filter by a field. */
+    filter?: (YoutubeComponentComponentFilterInput | null), 
+    /** Limit the number of items returned. Defaults to 500. */
+    first?: (Scalars['Int'] | null), 
+    /** Order by a field. */
+    orderBy?: (YoutubeComponentComponentOrderByEnum | null), 
     /** Skip the first n items. */
     skip?: (Scalars['Int'] | null)} })
     __typename?: boolean | number
@@ -7839,6 +7910,31 @@ export interface valueComponent_AsListGenqlSelection{
     __typename?: boolean | number
 }
 
+export interface youtubeComponentComponent_AsListGenqlSelection{
+    _analyticsKey?: { __args: {
+    /**
+     * The scope of the analytics key. Use `send` for just ingesting data. Use `query` if you need to show an analytics data in your website.
+     * 
+     * Have in mind, if you expose your `query` analytics key in the frontend, you'll be exposing all of this block's analytics data to the public. This is generally safe, but it might not be in your case.
+     */
+    scope?: (AnalyticsKeyScope | null)} } | boolean | number
+    _dashboardUrl?: boolean | number
+    _id?: boolean | number
+    _idPath?: boolean | number
+    _meta?: ListMetaGenqlSelection
+    /** The key used to search from the frontend. */
+    _searchKey?: boolean | number
+    _slug?: boolean | number
+    _slugPath?: boolean | number
+    _sys?: BlockDocumentSysGenqlSelection
+    _title?: boolean | number
+    /** Returns the first item in the list, or null if the list is empty. Useful when you expect only one result. */
+    item?: YoutubeComponentComponentGenqlSelection
+    /** Returns the list of items after filtering and paginating according to the arguments sent by the client. */
+    items?: YoutubeComponentComponentGenqlSelection
+    __typename?: boolean | number
+}
+
 export interface FragmentsMap {
   AuthorComponent: {
     root: AuthorComponent,
@@ -8328,6 +8424,10 @@ export interface FragmentsMap {
     root: Variant,
     selection: VariantGenqlSelection,
 }
+  YoutubeComponentComponent: {
+    root: YoutubeComponentComponent,
+    selection: YoutubeComponentComponentGenqlSelection,
+}
   _AgentSTART: {
     root: _AgentSTART,
     selection: _AgentSTARTGenqlSelection,
@@ -8555,5 +8655,9 @@ export interface FragmentsMap {
   valueComponent_AsList: {
     root: valueComponent_AsList,
     selection: valueComponent_AsListGenqlSelection,
+}
+  youtubeComponentComponent_AsList: {
+    root: youtubeComponentComponent_AsList,
+    selection: youtubeComponentComponent_AsListGenqlSelection,
 }
 }

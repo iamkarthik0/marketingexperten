@@ -1,3 +1,4 @@
+import type React from "react";
 import { RichText, type RichTextProps } from "basehub/react-rich-text";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 import { cva } from "class-variance-authority";
@@ -8,24 +9,30 @@ import Image from "next/image";
 import clsx from "clsx";
 
 export const richTextClasses = clsx(
-  "prose prose-zinc max-w-prose text-start dark:prose-invert font-normal text-md w-full leading-relaxed",
-  "prose-p:text-text-secondary dark:prose-p:text-dark-text-secondary",
-  "prose-h1:text-4xl prose-h1:font-medium prose-h1:text-text-primary dark:prose-h1:text-dark-text-primary",
-  "prose-h2:text-3xl prose-h2:font-medium prose-h2:text-text-primary dark:prose-h2:text-dark-text-primary",
-  "prose-h3:text-2xl prose-h3:font-medium prose-h3:text-text-primary dark:prose-h3:text-dark-text-primary",
-  "prose-blockquote:border-border prose-blockquote:pl-5 prose-blockquote:text-2xl prose-blockquote:text-text-primary dark:prose-blockquote:border-dark-border dark:prose-blockquote:text-dark-text-primary",
+  "prose prose-zinc max-w-[75ch] text-start dark:prose-invert font-normal text-md w-full leading-relaxed",
+  "prose-p:text-[--text-secondary] dark:prose-p:text-[--dark-text-secondary]",
+  "prose-h1:text-4xl prose-h1:font-medium prose-h1:text-[--text-primary] dark:prose-h1:text-[--dark-text-primary]",
+  "prose-h2:text-3xl prose-h2:font-medium prose-h2:text-[--text-primary] dark:prose-h2:text-[--dark-text-primary]",
+  "prose-h3:text-2xl prose-h3:font-medium prose-h3:text-[--text-primary] dark:prose-h3:text-[--dark-text-primary]",
+  "prose-blockquote:border-[--border] prose-blockquote:pl-5 prose-blockquote:text-2xl prose-blockquote:text-[--text-primary] dark:prose-blockquote:border-[--dark-border] dark:prose-blockquote:text-[--dark-text-primary]",
   '[&_blockquote>p]:before:[content:""] [&_blockquote>p]:prose-blockquote:after:[content:""]',
   "prose-h4:text-2xl prose-h4:font-medium",
   "prose-strong:font-medium",
-  "prose-a:outline-accent-500 dark:prose-a:text-accent-400 prose-a:text-accent-600 prose-a:no-underline prose-a:hover:underline prose-a:decoration-accent-500/50",
+  "prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:underline prose-a:decoration-blue-600 dark:prose-a:decoration-blue-400 prose-a:underline-offset-2 prose-a:transition-colors prose-a:duration-200",
+  "hover:prose-a:text-blue-500 prose-a:text-accent-500 dark:hover:prose-a:text-blue-300 hover:prose-a:decoration-blue-700 dark:hover:prose-a:decoration-blue-300",
+  "prose-a:outline-[--accent-500] prose-a:focus-visible:ring-2 prose-a:focus-visible:ring-blue-500 prose-a:focus-visible:ring-offset-2",
   "prose-pre:pl-0",
   s["rich-text"],
 );
 
 // @ts-expect-error Code won't match props
 export const richTextBaseComponents: RichTextProps["components"] = {
-  code: Code,
-  pre: ({ children }) => <>{children}</>,
+  code: ({ children }) => (
+    <Code isInline={true} code="">
+      {children}
+    </Code>
+  ),
+  pre: Code,
   b: ({ children }) => <strong>{children}</strong>,
   img: (props) => <RichTextImage {...props} />,
   video: (props) => <RichTextVideo {...props} />,
@@ -42,12 +49,14 @@ function Code({
 }) {
   if (isInline) {
     return (
-      <code className="rounded-sm border border-border px-2 py-0.5 text-accent-500 before:[content:none] after:[content:none] dark:border-dark-border dark:bg-dark-surface-secondary">
+      <code className="rounded-sm border border-[--border] px-2 py-0.5 text-[--accent-500] before:[content:none] after:[content:none] dark:border-[--dark-border] dark:bg-[--dark-surface-secondary]">
         {children}
       </code>
     );
   } else
-    return <pre className="rounded-lg border border-border dark:border-dark-border">{code}</pre>;
+    return (
+      <pre className="rounded-lg border border-[--border] dark:border-[--dark-border]">{code}</pre>
+    );
 }
 
 export const FaqItemComponentFragment = fragmentOn("FaqItemComponent", {
@@ -61,14 +70,14 @@ type FaqItemComponentRichText = fragmentOn.infer<typeof FaqItemComponentFragment
 
 export function FaqRichtextComponent({ answer, _title }: FaqItemComponentRichText) {
   return (
-    <details className="group mb-2 flex flex-col gap-4 overflow-hidden rounded-lg border border-border bg-surface-secondary pb-1 dark:border-dark-border dark:bg-dark-surface-secondary">
-      <summary className="flex cursor-pointer items-start text-pretty rounded-md p-3 pb-2 pl-6 font-medium text-text-primary outline-hidden ring-inset ring-accent-500 focus-visible:ring-3 dark:text-dark-text-primary">
+    <details className="group mb-2 flex flex-col gap-4 overflow-hidden rounded-lg border border-[--border] bg-[--surface-secondary] pb-1 dark:border-[--dark-border] dark:bg-[--dark-surface-secondary]">
+      <summary className="flex cursor-pointer items-start rounded-md p-3 pb-2 pl-6 font-medium text-pretty text-[--text-primary] ring-[--accent-500] outline-hidden ring-inset focus-visible:ring-3 dark:text-[--dark-text-primary]">
         <span className="mt-1 flex w-8 pr-2">
           <ChevronDownIcon className="transform group-open:rotate-180" />
         </span>
         {_title}
       </summary>
-      <p className="not-prose pb-3 pl-14 pr-3">{answer}</p>
+      <p className="not-prose pr-3 pb-3 pl-14">{answer}</p>
     </details>
   );
 }
@@ -90,7 +99,7 @@ export const richTextCalloutComponentFragment = fragmentOn("RichTextCalloutCompo
 type RichTextCalloutComponentFragment = fragmentOn.infer<typeof richTextCalloutComponentFragment>;
 
 const $richTextCallout = cva(
-  "gap-2 border border-accent-500/40 bg-accent-500/5 p-4 pl-3 rounded-xl",
+  "gap-2 border border-[--accent-500-40] bg-[--accent-500-5] p-4 pl-3 rounded-xl",
   {
     variants: {
       size: {
@@ -121,7 +130,7 @@ export function RichTextCalloutComponent({
     default:
       return (
         <article className={$richTextCallout()} id={_title}>
-          <div className="pr-2 text-accent-500">
+          <div className="pr-2 text-[--accent-500]">
             <svg
               fill="none"
               height="24"
@@ -143,6 +152,94 @@ export function RichTextCalloutComponent({
   }
 }
 
+// YouTube Component Fragment - Fixed
+export const youtubeComponentFragment = fragmentOn("YoutubeComponentComponent", {
+  _id: true,
+  _title: true,
+  youtubeUrl: true,
+  videoTitle: true,
+});
+
+type YoutubeComponentFragment = fragmentOn.infer<typeof youtubeComponentFragment>;
+
+function extractYouTubeVideoId(url: string): string | null {
+  console.log("Extracting video ID from URL:", url);
+
+  const patterns = [
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/,
+    /youtube\.com\/watch\?.*v=([^&\n?#]+)/,
+    /^([a-zA-Z0-9_-]{11})$/, // Direct video ID
+  ];
+
+  for (const pattern of patterns) {
+    const match = url.match(pattern);
+    if (match) {
+      console.log("Video ID found:", match[1]);
+      return match[1];
+    }
+  }
+
+  console.log("No video ID found");
+  return null;
+}
+
+export function YoutubeRichTextComponent({
+  youtubeUrl,
+  videoTitle,
+  _title,
+}: YoutubeComponentFragment) {
+  console.log("YouTube Component Props:", { youtubeUrl, videoTitle, _title });
+
+  if (!youtubeUrl) {
+    console.log("No YouTube URL provided");
+    return (
+      <div className="not-prose my-6 rounded-lg border border-yellow-200 bg-yellow-50 p-4 dark:border-yellow-800 dark:bg-yellow-900/20">
+        <p className="text-yellow-600 dark:text-yellow-400">No YouTube URL provided</p>
+      </div>
+    );
+  }
+
+  const videoId = extractYouTubeVideoId(youtubeUrl);
+
+  if (!videoId) {
+    return (
+      <div className="not-prose my-6 rounded-lg border border-red-200 bg-red-50 p-4 dark:border-red-800 dark:bg-red-900/20">
+        <p className="text-red-600 dark:text-red-400">Invalid YouTube URL: {youtubeUrl}</p>
+        <p className="mt-2 text-sm text-red-500 dark:text-red-300">
+          Supported formats:
+          <br />• https://www.youtube.com/watch?v=VIDEO_ID
+          <br />• https://youtu.be/VIDEO_ID
+          <br />• VIDEO_ID (direct)
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <figure className="not-prose my-6 flex flex-col gap-3">
+      <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-[--border] bg-black dark:border-[--dark-border]">
+        <iframe
+          src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`}
+          title={videoTitle || _title || "YouTube video"}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          className="absolute inset-0 h-full w-full"
+          loading="lazy"
+        />
+      </div>
+      {videoTitle && (
+        <figcaption className="text-center text-sm text-[--text-tertiary] dark:text-[--dark-text-tertiary]">
+          {videoTitle}
+        </figcaption>
+      )}
+      {/* <div className="text-xs text-[--text-tertiary] opacity-50 dark:text-[--dark-text-tertiary]">
+        Debug: Video ID = {videoId}
+      </div> */}
+    </figure>
+  );
+}
+
 export function RichTextImage(props: {
   src: string;
   alt?: string;
@@ -152,9 +249,9 @@ export function RichTextImage(props: {
 }) {
   return (
     <figure className="relative flex flex-col gap-2">
-      <Image alt={props.caption ?? ""} {...props} />
+      <Image alt={props.caption ?? "Image alt"} {...props} />
       {props.caption ? (
-        <figcaption className="m-0 text-sm text-text-tertiary dark:text-dark-text-tertiary">
+        <figcaption className="m-0 text-sm text-[--text-tertiary] dark:text-[--dark-text-tertiary]">
           {props.caption}
         </figcaption>
       ) : null}
@@ -176,7 +273,7 @@ export function RichTextVideo(props: {
         Your browser does not support the video tag.
       </video>
       {props.caption ? (
-        <figcaption className="m-0 text-sm text-text-tertiary dark:text-dark-text-tertiary">
+        <figcaption className="m-0 text-sm text-[--text-tertiary] dark:text-[--dark-text-tertiary]">
           {props.caption}
         </figcaption>
       ) : null}
