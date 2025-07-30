@@ -173,10 +173,10 @@ function extractYouTubeVideoId(url: string): string | null {
 
   for (const pattern of patterns) {
     const match = url.match(pattern);
-    if (match) {
-      console.log("Video ID found:", match[1]);
-      return match[1];
-    }
+    // if (match) {
+    //   console.log("Video ID found:", match[1]);
+    //   return match[1];
+    // }
   }
 
   console.log("No video ID found");
